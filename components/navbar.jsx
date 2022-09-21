@@ -12,7 +12,7 @@ const navbar = () => {
   return (
     <div className='navbar-container'>
       <p className='logo'>
-        <Link href="/">Headphones</Link>
+        <Link href="/"> All Payments handled Securely with Stripe</Link>
       </p>
 
       <button type='button' className='cart-icon' onClick={() =>

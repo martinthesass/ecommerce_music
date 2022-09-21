@@ -69,7 +69,7 @@ const ProductDetails = ( {product, products} ) => {
                     <h4>Details:</h4>
                     <p>{details}</p>
 
-                    <p className = "price">${price}</p>
+                    <p className = "price">€{price}</p>
 
                     <div className='quanity'>
                         <h3>Quantity: </h3>
@@ -102,7 +102,7 @@ const ProductDetails = ( {product, products} ) => {
 
                     <div className='maylike-products-wrapper'>
 
-                        <h2>you may also like</h2>
+                        <h2>You May Also Like</h2>
                         <div className='marquee'>
 
                         <div className='maylike-products-container track'>
