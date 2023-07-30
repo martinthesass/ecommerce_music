@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {client} from '../lib/client'
 
-import { Product, FooterBanner, HeroBanner }
-
-from '../components';
+import { Product, FooterBanner, HeroBanner } from '../components';
 
 
 
@@ -17,11 +15,12 @@ const Home = ({products, bannerData}) => (
 
 
     <div className='products-heading'>
-    <h2>Best Selling Products</h2>
-    <p>Chose Products Below</p>
+    <h2>Check out our best selling pairs</h2>
+    <p></p>
     
 
     </div>
+
 
     <div className='products-container'>
       {products?.map ((product) => <Product key={product._id} product ={product} />)}
@@ -43,6 +42,31 @@ const Home = ({products, bannerData}) => (
       props: {products, bannerData}
     }
 
+  }
+
+  function App(){
+    const[shopItems, setShopItems] = useState(Product);
+    const[categories, setCategories] = useState([]);
+
+    const filterItems = (category) => {
+      const newItems = items.filter((item)=> item.category === category)
+
+      setShopItems(newItems)
+    }
+
+    return (
+      <main>
+        <section className='shop-section'>
+          <div className='title'>
+            <h2>Our Products</h2>
+          </div>
+
+          <Categories filterItems={filterItems}/>
+          <Menu items = {menuItems} />
+        </section>
+      </main>
+
+    )
   }
 
 
