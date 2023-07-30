@@ -22,9 +22,7 @@ const HeroBanner = ({ heroBanner }) => {
           <Link href={`/product/${heroBanner.product}`}>
             {/* <button type = "button">{heroBanner.buttonText}</button> */}
 
-            <button type="button" className="book-apt-1">
-              See Offers Below
-            </button>
+            <p>See Offers Below</p>
           </Link>
 
           <div className="desc">
